@@ -844,4 +844,483 @@ int main (){
     
     return 0;    
 }
+
+
+
+
+
+										CHAPTER 4 ( LOOP CONTROL INSTRUCTION )
+											
+											LOOP(2) WHILE LOOP
+
+
+In C, the %d format specifier is used with printf when you want to print an integer value. For example, if you wanted to print the value of the variable i along with the message, you would use %d like this:
+
+
+
+   										print happy birthday 1 lakh times
+    
+#include <stdio.h>
+
+int main() {
+
+    int i = 0;
+    while(i<4){
+    printf("HAPPY BIRTHDAY \n");
+    i = i + 1;  //i++
+    }
+    return 0;
+}
+
+
+or
+
+
+#include <stdio.h>
+
+int main() {
+
+    int i = 0;
+    while(i<4){
+    printf("HAPPY BIRTHDAY %d\n",i);    //  %d and i is added to get HAPPY BIRTHDAY WITH NUMBERS
+    i++;
+    }
+    return 0;
+}
+
+
+										EXAMPLE OF A INFINITE LOOP
+
+
+#include <stdio.h>
+
+int main() {
+
+    int i = 0;
+    while(i<10){
+    printf("HAPPY BIRTHDAY %d\n",i);
+    
+    }
+    return 0;
+}
+
+
+									ANOTHER EXAMPLE OF A INFINITE LOOP
+
+
+#include <stdio.h>
+
+int main() {
+
+    int i = 0;
+    while(2<10){
+    printf("HAPPY BIRTHDAY %d\n",i);
+    i++;
+    }
+    return 0;
+}
+
+										QUICK QUIZ
+
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    while (i<=20){	//THIS CURLY BRACKET IS USED BECAUSE OF THE WHILE LOOP
+    if(i>=10){          //THIS CURLY BRACKET IS USED BECAUSE OF THE IF
+        printf ("THE VALUE OF i IS %d\n",i);
+    }
+    i++;
+    }
+    return 0;
+}
+
+									increment operators
+									BOTH'S RESULT IS SAME 
+
+#include <stdio.h>
+
+int main() {
+    int i = 5;
+    printf("THE VALUE OF i IS %d\n",i);//5
+    
+    i = i + 5;
+    printf("THE VALUE OF i IS %d\n",i);//10
+    
+    i++;//or ++i
+    printf("THE VALUE OF i IS %d",i);//11 
+    //i++ and ++i both will be giving the same answer but both are not same
+
+    return 0;
+}
+
+    //because i++ prints i first and then increments (post increment operator)
+    //because i++ increments first and then prints i (post increment operator)
+
+										
+										++i
+
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 5;
+    printf("THE VALUE OF i IS %d\n",i);//5
+    
+    i = i + 5;
+    printf("THE VALUE OF i IS %d\n",i);//10
+    
+    printf("THE VALUE OF i IS %d",++i);//11
+
+    return 0;
+}
+
+
+
+										i++
+
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 5;
+    printf("THE VALUE OF i IS %d\n",i);//5
+    
+    i = i + 5;
+    printf("THE VALUE OF i IS %d\n",i);//10
+    
+    printf("THE VALUE OF i IS %d",i++);//10
+
+    return 0;
+}
+
+								i++ AND THEN printf("THE VALUE OF i IS %d",i);//11
+
+#include <stdio.h>
+
+int main() {
+    int i = 5;
+    printf("THE VALUE OF i IS %d\n",i);//5
+    
+    i = i + 5;
+    printf("THE VALUE OF i IS %d\n",i);//10
+    
+    printf("THE VALUE OF i IS %d\n",i++);//10
+    printf("THE VALUE OF i IS %d",i);//11
+
+    return 0;
+}
+
+								USE OF i+= and difference (THE SAME CONCEPT IS APPLICABLE FOR i-= ,i*=and i/=.
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 5;
+    printf("THE VALUE OF i IS %d\n",i);//5
+    
+    i = i + 5;
+    printf("THE VALUE OF i IS %d\n",i);//10
+    
+    printf("THE VALUE OF i IS %d\n",i++);//10
+    printf("THE VALUE OF i IS %d\n",i);//11
+    
+    i+=2;//is same as i = i+2;
+    printf("THE VALUE OF i IS %d\n",i);//13
+
+    return 0;
+}
+
+								         LOOP(2) DO WHILE LOOP
+								
+
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    
+    do{
+        printf ("THE VALUE OF i IS %d\n",i);
+        i++;
+    }while (i<4);
+    
+    return 0;
+}
+
+										QUICK QUIZ(pg.23)
+
+
+
+#include <stdio.h>
+
+int main(){
+
+    int n, i=1;
+    scanf("%d", &n);
+
+    do{
+        printf("%d\n", i);
+        i++;
+    }while(i<=n);
+    
+    return 0;
+}
+
+									0	QUICK QUIZ(PG.24)
+
+
+
+#include <stdio.h>
+
+int main() {
+    int n = 8;
+    
+    for (int i=1; i<=n; i++){
+    printf("the value of i is %d\n",i);
+}
+    return 0;
+}
+
+										QUICK QUIZ (PG.24)
+
+#include <stdio.h>
+
+int main() {
+    int n = 1;
+    int i = 88;
+    for (i; i; i--){
+
+    printf("the value of i is %d\n",i);   
+    }
+    
+    return 0;
+}
+
+
+
+
+										BEST QUESTION TO UNDERSTAND THE CONCEPT
+
+#include <stdio.h>
+
+int main() {
+int i;
+    
+    for (i;i<=10;i++){
+    if (i==5){
+    break;//EXIT THE LOOP NOW!
+    }
+    printf ("the value of i is %d\n",i);
+    }
+    printf ("FOR LOOP IS DONE");
+    
+    return 0;
+}
+
+OR
+
+
+#include <stdio.h>
+
+int main() {
+int i;
+    
+    for (i;i<=10;i++){
+    if (i==5){
+    
+    continue;//USED TO REMOVE(skip) 1 ITERATION
+    }
+    printf ("the value of i is %d\n",i);
+    }
+    printf ("FOR LOOP IS DONE");
+    
+    return 0;
+}
+
+										CHAPTER 4 PRACTICE SET 
+										QUESTION NO.1
+
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= 10; i++) {
+        printf("%d * %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}
+
+
+										QUESTION NO.2
+
+										
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf ("%d",&n);
+    
+    for (int i=10;i;i--){
+        printf ("%d * %d = %d\n",n,i,n*i);
+        if(i==1){
+            break;
+        }
+    }
+    
+    return 0;
+}
+
+
+
+										QUESTION NO.5								
+
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    int sum = 0;
+    while (i<=10){
+    sum += i;
+    i++;
+    }
+    printf("THE SUMMATION OF THE FIRST 10 NATURAL NUMBERS IS %d ",sum);
+
+    return 0;
+}
+
+
+
+
+										QUESTION NO.6
+
+										USING DO WHILE LOOP
+
+
+
+										USING FOR LOOP
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    int sum = 0;
+    
+    for (i ; i<=10; i++){
+    sum += i;
+    }
+    printf("THE SUMMATION OF FIRST 10 NATURAL NUMBERS IS %d\n",sum);
+    return 0;
+}
+
+
+
+										USING FOR LOOP
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    int sum = 0;
+    do{
+    sum += i;
+    i++;
+    }while (i<=10);
+    printf("THE SUMMATION OF THE FIRST 10 NATURAL NUMBERS IS %d ",sum);
+
+    return 0;
+}
+
+
+
+
+
+										QUESTION NO.7										
+										
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    int sum = 10;
+    for (i; i<=10; i++){
+    sum += (8*i);
+    }
+    printf("THE SUMMATION OF ALL THE VALUES COMING AS A ANSWER IN 8's TABLE UPTO 10 IS %d",sum);
+    return 0;
+}
+
+
+
+										QUESTION NO.8
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    int product = 1;
+    int n = 4;
+    for (i ;i<=n ;i++){
+        product *= i;
+    }
+    printf ("THE ANSWER IS %d",product);
+    return 0;
+}
+
+									NUMBER GUESSING GAME (PROJECT 1)
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    // Initialize random number generator
+    srand(time(0));
+    
+    // Generate random number between 1 and 100
+    int randomNumber = (rand() % 100) + 1;
+    int no_of_guesses = 0;
+    int guessed_number;
+    
+    // Print instructions
+    printf("Guess the number between 1 and 100:\n");
+    
+    do {
+        // Prompt user for input
+        printf("Enter your guess: ");
+        scanf("%d", &guessed_number);
+        
+        // Provide feedback based on the guess
+        if (guessed_number > randomNumber) {
+            printf("Lower number please!\n");
+        } else if (guessed_number < randomNumber) {
+            printf("Higher number please!\n");
+        } else {
+            printf("Congrats!! You guessed the number!\n");
+        }
+        
+        // Increment the number of guesses
+        no_of_guesses++;
+        
+    } while (guessed_number != randomNumber);
+    
+    // Print the number of guesses taken
+    printf("You guessed the number in %d guesses.\n", no_of_guesses);
+
+    return 0;
+}
+
+
+
+
  
