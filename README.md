@@ -1321,6 +1321,165 @@ int main() {
 }
 
 
+C LANGUAGE CHAPTER 7
+
+
+#include<stdio.h>
+
+int main (){
+    
+    int BOOK[7];
+    BOOK[0] = 455;
+    BOOK[1] = 400;
+    BOOK[2] = 440;
+//WE CAN GO ALL THE WAY TILL 6 REMEMBER.
+    
+    printf("THE PRICE OF ALL THE BOOKS ARE %d %d %d",BOOK[0],BOOK[1],BOOK[2]);
+    
+    return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    
+    int NINJA[5];
+    
+    printf("ENTER THE NUMBERS OF THE FIVE NINJAS:");
+    
+    scanf("%d", &NINJA[0]);
+    scanf("%d", &NINJA[1]);
+    scanf("%d", &NINJA[2]);
+    scanf("%d", &NINJA[3]);
+    scanf("%d", &NINJA[4]);
+    
+    printf("THE NUMBER OF THE FIRST NINJA IS %d AND THE NUMBER OF THE FIFTH NINJAS IS %d",NINJA[0],NINJA[4]);
+    
+    return 0;
+}
+									ANOTHER WAY
+
+#include<stdio.h>
+int main(){
+    
+    int NINJA[5];
+    
+    printf("ENTER THE NUMBERS OF THE FIVE NINJAS:");
+    
+    for(int i = 0;i < 5;i++)
+    scanf("%d", &NINJA[i]);
+
+    printf("THE NUMBER OF THE FIRST NINJA IS %d AND THE NUMBER OF THE FIFTH NINJAS IS %d",NINJA[0],NINJA[4]);
+    
+    return 0;
+}
+
+
+
+									ANOTHER WAY
+
+
+
+#include<stdio.h>
+int main(){
+    
+    int NINJA[5] = {1,2,3,4,5};
+    
+    for(int i = 0;i < 5;i++){
+        
+    printf("THE NUMBER OF THE FIRST NINJA IS %d AND THE NUMBER OF THE SECOND NINJA IS %d\n",NINJA[0],NINJA[4]);
+    }
+    
+    return 0;
+}
+							THE SUM OF THE TWO VALUES USING ARRAYS CONCEPT
+
+
+#include<stdio.h>
+int main(){
+    
+    int marks[7] = {1,2,3,4,5,6,7};
+    for (int i = 0; i <7; i++){
+    }
+    printf ("THE SUM OF THE FIRST AND THE THIRD VALUE IS %d \n",marks[0]+marks[2]);
+    
+    return 0;
+}
+
+						SLIGHTLY DIFFERENT WAY OF WRITTING THE SAME CODE (i.g. = [] LEAVING IT BLANK
+
+#include<stdio.h>
+int main(){
+    
+    int NINJA[5] = {1,2,3,4,5};
+    
+    for(int i = 0;i < 5;i++){
+        
+    printf("THE NUMBER OF THE FIRST NINJA IS %d AND THE NUMBER OF THE SECOND NINJA IS %d\n",NINJA[0],NINJA[4]);
+    }
+    
+    return 0;
+}
+******************************THAT'S IT THIS WAS ALL WHICH WAS IN OUR COURSE TO LEARN ABOUT THE ARRAYS********************************************************************
+
+TRAVERSING 
+
+
+#include <stdio.h>
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5}; // Array with 5 elements
+
+    // Traversing the array using a fixed size
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", numbers[i]); // Print each element
+    }
+
+    return 0;
+}
+
+							TRAVERSING AND INSERTION BOTH'S CONCEPT EXAMPLE 
+
+
+#include <stdio.h>
+
+void display(int arr[], int n) {
+    // Code for traversal
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int indInsertion(int arr[], int size, int element, int capacity, int index) {
+
+    // Code for insertion
+    if (size >= capacity) {  // Corrected condition for checking capacity
+        return -1;
+    }
+    for (int i = size - 1; i >= index; i--) {
+        arr[i + 1] = arr[i]; // Shifting elements to the right
+    }
+    arr[index] = element; // Inserting element at the given index
+    return 1;
+}
+/*A toy box (arr) that currently has 5 toys (size = 5).
+Your box can hold up to 10 toys (capacity = 10).
+You want to add a new toy car (element = toy car).
+You want to place it in the third position (index = 2)*/
+
+int main() {
+    int arr[100] = {7, 8, 12, 27, 88}; // Corrected initialization
+    int size = 5, element = 45, index = 3;
+    
+    display(arr, size);
+    indInsertion(arr, size, element, 100, index);
+    size += 1; // Updating size after insertion
+    display(arr, size);
+
+    return 0;
+}
+
 
 
  
