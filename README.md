@@ -5,7 +5,7 @@ CHAPTER 1 C LANGUAGE
 
 
 									DOUBLE USE OF printf
-
+ 
 
 #include <stdio.h>
 
@@ -849,7 +849,7 @@ int main (){
 
 
 
-										CHAPTER 4 ( LOOP CONTROL INSTRUCTION )
+CHAPTER 4 ( LOOP CONTROL INSTRUCTION )
 											
 											LOOP(2) WHILE LOOP
 
@@ -1276,7 +1276,7 @@ int main() {
     return 0;
 }
 
-									NUMBER GUESSING GAME (PROJECT 1)
+NUMBER GUESSING GAME (PROJECT 1)
 
 
 #include <stdio.h>
